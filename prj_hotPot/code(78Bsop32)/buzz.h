@@ -1,5 +1,5 @@
 #ifndef __buzz_h
-    #define __buzz_h
+#define __buzz_h
 //HAL--------------------
       #define P_buzz    P1_4
       #define F_buzz()     P_buzz = ~P_buzz

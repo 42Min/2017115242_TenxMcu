@@ -1,7 +1,7 @@
-
 #define __buzz_c
 
-#include    "includeAll.h"
+#include  "includeAll.h"
+#include  "buzz.h"
 
 void BuzzCount(uint8_t count)
 {
@@ -9,6 +9,5 @@ void BuzzCount(uint8_t count)
 }
 
 void Buzz(){
-    buzzLastTimer = D_buzzLastTime;
+    buzzLastTimer = D_buzzLastTime ;
 }
-

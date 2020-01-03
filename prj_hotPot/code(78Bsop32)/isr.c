@@ -13,7 +13,7 @@
 // Author:
 //=============================================================================
 void INT0_int(void) interrupt 0 {
-  IE0 = 0; 	// clear interrupt flag
+  IE0 = 0; // clear interrupt flag
 }
 //=============================================================================
 // Function:	void TIMER0_int(void)
@@ -24,6 +24,7 @@ void INT0_int(void) interrupt 0 {
 //=============================================================================
 void TIMER0_int(void) interrupt 1 {
   TF0 = 0; // clear interrupt flag
+  //------------
 }
 //=============================================================================
 // Function:	void INT1_int(void)
@@ -75,7 +76,6 @@ void TIMER2_int(void) interrupt 5 {
 // Author:
 //=============================================================================
 //void TIMER3_int(void) interrupt 7 { INTFLAG &= ~TF3; }
-
 //=============================================================================
 // Function:	void P1_int(void)
 // Purpose:	P1 pin interrupt vector
@@ -84,7 +84,6 @@ void TIMER2_int(void) interrupt 5 {
 // Author:
 //=============================================================================
 //void P1_int(void) interrupt 8 { INTFLAG &= ~P1IF; }
-
 //=============================================================================
 // Function:	void INT2_int(void)
 // Purpose:	INT2 pin interrupt vector
@@ -100,8 +99,8 @@ void TIMER2_int(void) interrupt 5 {
 // OutPut:	none
 // Author:
 //=============================================================================
-//void ADC_TK_int(void) interrupt 10 {
-  //INTFLAG &= ~ADIF;
-  //INTFLAG &= ~TKIF;
-  //TKCON2 &= ~TKAUTO; // disable touch key auto scan
-//}
+void ADC_TK_int(void) interrupt 10 {
+//  INTFLAG &= ~ADIF;
+//  INTFLAG &= ~TKIF;
+  TKCON2 &= ~TKAUTO; // disable touch key auto scan
+}

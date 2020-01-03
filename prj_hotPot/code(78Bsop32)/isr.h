@@ -5,7 +5,6 @@
 // Const: exp: #define D_data 1 ----------------
 
 // Globle Var -----------------------------------------
-
 #ifdef __isr_c
 bit b1ms;
 #else

@@ -1,21 +1,26 @@
 #ifndef __display_h
 #define __display_h
-// Hal: exp: #define LED_COM P10 -----------------
-#define LED_COM P1_0
+// Hal: exp: #define P_ledcom P10 -----------------
+#define P_ledcom P1_0
+#define P_led1 P1_4
+#define P_led2 P1_2
 
 // Const: exp: #define D_data 1 ----------------
-#define D_ledOn 1  	//高电平led灯亮
-#define D_ledOff 0 	//低电平led灯灭
-// Globle Var ----------------------------------
-
+#define D_ledcom_Off 1  //高电平灭
+#define D_ledcom_On 0 	//低电平亮
+// Globle Var -----------------------------------------
 #ifdef __display_c
-
+bit bflag0;
+bit bflag;
 #else
-
+extern bit bflag0;
+extern bit bflag;
 #endif
+
 // Action Macro: exp: #define F_getData() ------
-#define F_ledOn() LED_COM = D_ledOn
-#define F_ledOff() LED_COM = D_ledOff
-#define F_ledNeg() LED_COM = ~LED_COM
+#define F_ledcom_On() P_ledcom = D_ledcom_On         
+#define F_ledcom_Off() P_ledcom = D_ledcom_Off     
+#define F_ledcom_Neg() P_ledcom = ~P_ledcom
 // Function ------------------------------------
+
 #endif
