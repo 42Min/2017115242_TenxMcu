@@ -1,7 +1,7 @@
 #ifndef __display_h
 #define __display_h
 // Hal: exp: #define P_ledcom P10 -----------------
-#define P_ledcom P1_0
+#define P_ledcom P1_0 
 #define P_led1 P1_4
 #define P_led2 P1_2
 
@@ -22,5 +22,7 @@ extern bit bflag;
 #define F_ledcom_Off() P_ledcom = D_ledcom_Off     
 #define F_ledcom_Neg() P_ledcom = ~P_ledcom
 // Function ------------------------------------
-
+void LED1_and_LED2();
+void LED1_ON();
+void LED2_ON();
 #endif
